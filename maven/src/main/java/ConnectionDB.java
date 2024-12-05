@@ -3,11 +3,12 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConnectionDB {
+    private static final String url = "jdbc:mysql://localhost:3306/rocket_db";
+    private static final String user = "root";
+    private static final String password = "123456";
+
     public static Connection connectionDB(){
         //criando conexão com o banco
-        String url = "jdbc:mysql://localhost:3306/rocket_db";
-        String user = "root";
-        String password = "123456";
 
         Connection connection = null;
 
