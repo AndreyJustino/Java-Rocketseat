@@ -28,7 +28,7 @@ public class InsertUser {
             pst.setInt(3, user.getAge());
 
             // executando a query
-            pst.execute();
+            pst.executeUpdate();
             System.out.println("Dados inseridos com sucesso");
 
             //fechando a conexão
