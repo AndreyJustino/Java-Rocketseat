@@ -16,8 +16,6 @@ public class ConnectionDB {
 
             connection = DriverManager.getConnection(url, user, password);
 
-            System.out.println("Conexão criada com sucesso!");
-
         } catch (SQLException e) {
             System.out.println("Erro em conexão com o banco: " + e.getMessage());
         }

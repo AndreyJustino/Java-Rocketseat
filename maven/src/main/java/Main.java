@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        InsertUser.insertUser("trevo@mail.com", "Trevo", 2);
+
+        InsertUser.insertUser(new User("admin", "admin@mail.com", 19));
     }
 }

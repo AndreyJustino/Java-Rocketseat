@@ -4,7 +4,7 @@ import java.sql.SQLException;
 
 public class InsertUser {
     //inserindo dados no banco
-    public static void insertUser(String email, String name, int age){
+    public static void insertUser(User user){
         // criando query
         String querySQL = "INSERT INTO rocket_db.tbl_usuario (email, nome, idade) VALUES(?, ?, ?);";
 
@@ -23,9 +23,9 @@ public class InsertUser {
             PreparedStatement pst = connection.prepareStatement(querySQL);
 
             // dizendo em qual parametro vai ser inserido e o tipo de dados que vai ser inserido
-            pst.setString(1, email);
-            pst.setString(2, name);
-            pst.setInt(3, age);
+            pst.setString(1, user.getEmail());
+            pst.setString(2, user.getName());
+            pst.setInt(3, user.getAge());
 
             // executando a query
             pst.execute();
