@@ -4,10 +4,6 @@ import java.sql.SQLException;
 
 public class Main {
     public static void main(String[] args) {
-        connectionDB();
-    }
-
-    public static void connectionDB(){
         String url = "jdbc:mysql://localhost:3306/rocket_db";
         String user = "root";
         String password = "123456";
