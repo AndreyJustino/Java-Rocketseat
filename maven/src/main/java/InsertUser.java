@@ -5,6 +5,14 @@ import java.sql.SQLException;
 public class InsertUser {
     //inserindo dados no banco
     public static void insertUser(User user){
+
+        SelectUser result = SelectUser.selectUser(user);
+
+        if (result != null){
+            System.out.println("Usuario ja cadastrado.");
+            return;
+        }
+
         // criando query
         String querySQL = "INSERT INTO rocket_db.tbl_usuario (email, nome, idade) VALUES(?, ?, ?);";
 

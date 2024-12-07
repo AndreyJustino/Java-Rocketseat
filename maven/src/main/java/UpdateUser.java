@@ -4,6 +4,15 @@ import java.sql.SQLException;
 
 public class UpdateUser {
     public static void updateUser(User user){
+
+        SelectUser result = SelectUser.selectUser(user);
+
+        if (result == null){
+
+            System.out.println("Usuario não encontrado.");
+            return;
+        }
+
         String querySQL = "UPDATE rocket_db.tbl_usuario SET nome=?, idade=? WHERE email=? ;";
 
         Connection connection = ConnectionDB.connectionDB();

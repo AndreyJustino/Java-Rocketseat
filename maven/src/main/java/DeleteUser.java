@@ -5,6 +5,14 @@ import java.sql.SQLException;
 public class DeleteUser {
     public static void deleteUser(User user){
 
+        SelectUser result = SelectUser.selectUser(user);
+
+        if (result == null){
+
+            System.out.println("Usuario não encontrado.");
+            return;
+        }
+
         String querySQL = "DELETE FROM rocket_db.tbl_usuario WHERE email=?;";
 
         Connection connection = ConnectionDB.connectionDB();
