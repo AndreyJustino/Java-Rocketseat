@@ -45,6 +45,7 @@ public class SelectUser {
             System.out.println("Erro ao selecionar usuario: " + e.getMessage());
         }
 
+        System.out.println("Usuario não encontrado.");
         return selectUser;
     }
 
