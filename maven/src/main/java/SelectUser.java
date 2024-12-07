@@ -45,10 +45,6 @@ public class SelectUser {
             System.out.println("Erro ao selecionar usuario: " + e.getMessage());
         }
 
-        if (selectUser == null){
-            return null;
-        }
-
         return selectUser;
     }
 
